@@ -22,12 +22,8 @@ Get Started:
 conda env create -f attnviz.yml
 ```
 
-
-
-
-
 Logistics:
 - GPT-J has 28 layers with 16 heads per layer.<br>
 - There are two widgets the attn head selector widget and the token viz widget. <br>
-- The TokenVizWidget requires the tokenized prompt text, attention matrix (n_layers,n_heads,#tokens,#tokens), and a default matrix (n_layers,n_heads,#tokens) to build.<br> 
-- If you don't have time to run a causal dependence experiment, you can just create an np array of 0's to fill the slot.
+- The `TokenVizWidget` requires the tokenized prompt text, `attention matrix` of size `(n_layers,n_heads,n_tokens,n_tokens)`, and a `default matrix` of size `(n_layers,n_heads,n_tokens)` to build.<br> 
+- Unless you have a specific default you're interested in, you can just create an `ndarray` of 0's to fill the `default_display` slot.
