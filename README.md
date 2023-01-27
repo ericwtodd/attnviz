@@ -13,7 +13,9 @@ Usage:
 - If no token is hover-selected or clicked, the default display is the contents of the `default_matrix` array passed to the `TokenVizWidget`.
 
 <!-- Insert GIF of the tool here -->
-
+<p>
+<img src="https://github.com/ericwtodd/attnviz/blob/112e89c18e2a7b347729631b0b033dacf1b943fb/images/restaurant_demo.gif" width="975"/>
+</p>
 
 Get Started:
 - You can install the conda environment that supports this visualization tool with the following command:
