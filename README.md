@@ -3,19 +3,19 @@
 Overview:
 - This repo contains code for visualizing the attention patterns of standard decoder-only GPT-style models in an interactive jupyter notebook. (The demo notebook has an example for visualizing attention in GPT-J (https://huggingface.co/docs/transformers/model_doc/gptj)
 
-- While other methods exist for visualizing attention patterns of larger language models, they don't scale well for longer prompts/contexts.
+- While other methods exist for visualizing attention patterns of larger language models, they don't scale well for longer prompts/contexts. I built two widgets (the `AttnHeadSelectorWidget`, and `TokenVizWidget`) that interact to help solve this problem.
 
-- There are two widgets I built that interact to solve this problem. The `AttnHeadSelectorWidget`, and `TokenVizWidget`.
+<!-- Insert GIF of the tool here -->
+<p>
+<!--<img src="https://github.com/ericwtodd/attnviz/blob/112e89c18e2a7b347729631b0b033dacf1b943fb/images/restaurant_demo.gif" height="350" width="1251"/>-->
+  <img src="https://github.com/ericwtodd/attnviz/blob/1ef059b0ed3526328e484f44afee2348d91a4a51/images/restaurant_demo_small.gif" height="350"/>
+</p>
 
 Usage:
 - Use the selectors to pick an attention head. Hover over a token to display its attention pattern and tooltip.
 - Click on a token to lock its attention pattern. Click the same token to unlock. 
 - If no token is hover-selected or clicked, the default display is the contents of the `default_matrix` array passed to the `TokenVizWidget`.
 
-<!-- Insert GIF of the tool here -->
-<p>
-<img src="https://github.com/ericwtodd/attnviz/blob/112e89c18e2a7b347729631b0b033dacf1b943fb/images/restaurant_demo.gif" width="975"/>
-</p>
 
 Get Started:
 - You can install the conda environment that supports this visualization tool with the following command:
@@ -23,9 +23,3 @@ Get Started:
 ```
 conda env create -f attnviz.yml
 ```
-
-Logistics:
-- GPT-J has 28 layers with 16 heads per layer.<br>
-- There are two widgets the attn head selector widget and the token viz widget. <br>
-- The `TokenVizWidget` requires the tokenized prompt text, `attention matrix` of size `(n_layers,n_heads,n_tokens,n_tokens)`, and a `default matrix` of size `(n_layers,n_heads,n_tokens)` to build.<br> 
-- Unless you have a specific default you're interested in, you can just create an `ndarray` of 0's to fill the `default_display` slot.
