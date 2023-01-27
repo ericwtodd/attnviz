@@ -1,0 +1,35 @@
+{
+    "instructions": "For each sentence, list the restaurants mentioned in the Google review, or \"none\" if no restaurants are in the text.",
+    "examples": [
+        {
+            "input": "I ordered the Big Mac from McDonald's and it did not look like the picture in the advertisement!",
+            "output": "McDonald's"
+        },
+        {
+            "input": "Taco Bell has the best veggie burritos you can get for $2, what a steal.",
+            "output": "Taco Bell"
+        },
+        {
+            "input": "Because this location is out of business, I would not recommend going to this Pizza Hut.",
+            "output": "Pizza Hut"
+        },
+        {
+            "input": "What a great experience we had at Chick-fil-A for our corporate event, the food was amazing and delivered on time.",
+            "output": "Chick-fil-A"
+        },
+        {
+            "input": "This Burger King is a joke becuase they charge you for sauces... go to the McDonald's down the street.",
+            "output": "Burger King; McDonald's"
+        },
+        {
+            "input": "The fries are great, and the Frostys are always a treat.",
+            "output": "none"
+        }
+    ],
+    "prefixes": {
+        "input": "Sentence:\n",
+        "output": "Restaurant:\n",
+        "instructions": ""
+    },
+    "separator": "\n\n"
+}
