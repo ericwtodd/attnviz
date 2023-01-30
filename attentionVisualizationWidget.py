@@ -76,7 +76,7 @@ class TokenVizWidget(Widget):
               });
             });
             
-            // Initialize token color to token dependence
+            // Initialize token color to token defaults
             this.static_set_background_color(this.tokens.length, true)
             
             //updates variables accessible through interaction/python
@@ -136,7 +136,7 @@ class TokenVizWidget(Widget):
                       if (turn_on && Math.abs(mag) > 0.01){
                           s.style.backgroundColor = `rgba(${c_val[0]}, ${c_val[1]}, ${c_val[2]},1)`;
                           s.style.border = "1px solid rgba(128,128,128,0.5)";
-                          s.title += `Token Dependence: ${mag.toFixed(5)}`;
+                          s.title += `Token Default Value: ${mag.toFixed(5)}`;
                       }
                       else{
                           s.style.backgroundColor = null;
